@@ -1,15 +1,15 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-26 14:44:34
- * @LastEditors: jinech 13478707150@163.com
- * @LastEditTime: 2024-05-29 11:42:41
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-29 17:55:32
  * @FilePath: \spa-template\src\configure\layout\index.js
  * @Description: 主菜单配置
  */
 
 import React from 'react';
 
-import { MenuItemType, SubMenuType, MenuItemGroupType, MenuDividerType } from 'antd/lib/menu/hooks/useItems';
+import { MenuItemType, SubMenuType, MenuItemGroupType, MenuDividerType } from 'antd/es/menu/interface';
 
 export type ItemType = MenuItemType | SubMenuType | MenuItemGroupType | MenuDividerType;
 

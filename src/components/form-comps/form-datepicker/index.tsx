@@ -1,8 +1,8 @@
 /*
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-06-20 15:37:17
- * @LastEditors: jinech 13478707150@163.com
- * @LastEditTime: 2024-05-21 10:08:28
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-29 17:53:55
  * @FilePath: \business-register-web\src\components\form-comps\form-datepicker\index.tsx
  * @Description: 时间控件
  */
@@ -12,17 +12,17 @@ import cls from 'classnames';
 
 import { DatePicker } from 'antd';
 
-import styles from './index.module.less';
-import { PickerDateProps /* PickerBaseProps */ /* PickerTimeProps */ } from 'antd/lib/date-picker/generatePicker';
-import moment, { Moment } from 'moment';
+import { DatePickerProps } from 'antd/lib';
+import dayjs, { Dayjs } from 'dayjs';
 
-// PickerBaseProps<Moment> | PickerDateProps<Moment> | PickerTimeProps<Moment>
+import styles from './index.module.less';
+
 type FormRangePickerComp = typeof DatePicker.RangePicker;
 
-interface FormDatePickerProps extends PickerDateProps<Moment> {
+interface FormDatePickerProps extends DatePickerProps<Dayjs> {
 }
 
-const FormDatePicker: React.FC<FormDatePickerProps> & {RangePicker: FormRangePickerComp} = ({
+const FormDatePicker: React.FC<FormDatePickerProps> & { RangePicker: FormRangePickerComp } = ({
     className,
     value,
     ...props
@@ -33,10 +33,10 @@ const FormDatePicker: React.FC<FormDatePickerProps> & {RangePicker: FormRangePic
         if (!value) {
             return null;
         }
-        if (moment.isMoment(value)) {
+        if (dayjs.isDayjs(value)) {
             return value;
         }
-        return moment(value);
+        return dayjs(value);
     }, [value]);
 
     return (

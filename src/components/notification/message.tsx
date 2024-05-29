@@ -1,8 +1,8 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-27 10:47:36
- * @LastEditors: JC 13478707150@163.com
- * @LastEditTime: 2023-01-06 09:42:59
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-29 17:54:27
  * @FilePath: \spa-template\src\components\Notification\Message.tsx
  * @Description: 提示框-消息部分
  */
@@ -25,7 +25,7 @@ const Message: React.FC<MessageDomProps> = ({content, message, countdown = 3, no
         }
 
         if (counter === 0) {
-            notifincationAntd.close(notificationKey);
+            notifincationAntd.destroy(notificationKey);
         }
 
         return () => {

@@ -26,7 +26,7 @@
         "@reduxjs/toolkit": "^1.6.1",
         "@tweenjs/tween.js": "^20.0.3",
         "ahooks": "^3.3.8",
-        "antd": "4.24.7",
+        "antd": "^5.17.4",
         "axios": "^0.26.1",
         "bfj": "^7.0.2",
         "browserslist": "^4.18.1",
@@ -196,18 +196,7 @@
                 "react-app",
                 false
             ]
-        ],
-        "plugins": [
-            [
-                "import",
-                {
-                    "libraryName": "antd",
-                    "style": true,
-                    "libraryDirectory": "lib"
-                },
-                "antd"
-            ]
         ]
     },
-    "proxy": "http://192.168.40.110:8058"
+    "proxy": "http://localhost:5504"
 }
