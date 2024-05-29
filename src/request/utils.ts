@@ -1,8 +1,8 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-27 10:34:08
- * @LastEditors: WIN-J7OL7MK489U\EDY 13478707150@163.com
- * @LastEditTime: 2024-01-31 14:46:51
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-29 18:05:15
  * @FilePath: \spa-template\src\request\util.ts
  * @Description: 请求服务工具包
  */
@@ -14,7 +14,7 @@ import { blackList as redirectBlackList } from '@/configure/routes';
 
 export const isDev = process.env.NODE_ENV === 'development';
 // export const baseURL = process.env.NODE_ENV === 'development' ? `http://localhost:${process.env.PORT}/api` : `${process.env.REACT_APP_BASE_URL}/api`;
-export const baseURL = `${process.env.REACT_APP_BASE_URL}/meterReading`;
+export const baseURL = `${process.env.REACT_APP_BASE_URL}/api`;
 export const localUrl = window.location.origin;
 export const timeout = 1000 * 30;
 

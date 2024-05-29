@@ -14,13 +14,13 @@ import {
     exampleApi
 } from '../api';
 
-export const roomDelAction = params => request.post(exampleApi, params);
+export const exampleGetAction = params => request.post(exampleApi, params);
 
-export const dataStatisticsAction = params => request.get(exampleApi, {
+export const getUserInfoAction = params => request.get(exampleApi, {
     params
 });
 
-export const meterReadingExportDataAction = async ({
+export const exampleDownloadAction = async ({
     fileName,
     ...params
 }) => download({

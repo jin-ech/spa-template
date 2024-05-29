@@ -12,9 +12,7 @@ import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUserDetail, userDetail } from '@/store/user.slice';
 
-// import { getUserInfoAction } from '@actions';
-// import { UserInfoModel } from '@/request/model';
-import { mockRequest } from '@/utils';
+import { getUserInfoAction } from '@actions';
 
 const useUserInfo = () => {
     const dispatch = useDispatch();
@@ -39,8 +37,7 @@ const useUserInfo = () => {
     const getUserInfoTask = async values => {
         try {
             updateLoading(true);
-            // const res = await getUserInfoAction(values);
-            const res = await mockRequest(() => {}, 500);
+            const res = await getUserInfoAction(values);
             dispatchUserInfo(res?.data);
             return res;
         }
