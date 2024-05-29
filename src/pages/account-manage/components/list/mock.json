@@ -1,0 +1,403 @@
+{
+    "data": {
+        "count": "10",
+        "list": [
+            {
+                "id": "3",
+                "merchant_code": "yufufei",
+                "overdue_fine": "10",
+                "certificate_num": "3",
+                "agreement_num": "yufufei123",
+                "hire_name": "预付费账户",
+                "hire_mobile1": "123456",
+                "account_status": "销户",
+                "created_at": "2024-01-15 10:29:06",
+                "cancel_account_at": "2024-01-12 14:34:27",
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "1000",
+                "room_list": [
+                    {
+                        "id": "19",
+                        "room_no": "100802",
+                        "room_name": "后付费房间",
+                        "room_floor": "9",
+                        "room_area": "8",
+                        "room_department": "7",
+                        "meter_list": [
+                            {
+                                "id": "8",
+                                "electric_no": "E004",
+                                "type": "2",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "后付费",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "7",
+                                "electric_no": "E003",
+                                "type": "2",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "后付费",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "14",
+                                "electric_no": "E010",
+                                "type": "2",
+                                "price": "3.00",
+                                "meter_type": "2",
+                                "meter_type_desc": "水表",
+                                "type_desc": "后付费",
+                                "unit_price_title": "平价1模版"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "6",
+                "merchant_code": "houfufei",
+                "overdue_fine": "10",
+                "certificate_num": "123",
+                "agreement_num": "houfufei123",
+                "hire_name": "后付费账户",
+                "hire_mobile1": "15204619721",
+                "account_status": "销户",
+                "created_at": "2023-11-06 11:46:01",
+                "cancel_account_at": "2024-01-12 14:35:40",
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "",
+                "room_list": []
+            },
+            {
+                "id": "10",
+                "merchant_code": "rengongchaobiao",
+                "overdue_fine": "10",
+                "certificate_num": "12311111",
+                "agreement_num": "rengongchaobiao123",
+                "hire_name": "人工抄表账户",
+                "hire_mobile1": "12312123",
+                "account_status": "销户",
+                "created_at": "2024-01-15 10:51:04",
+                "cancel_account_at": "2024-01-15 14:28:12",
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "100",
+                "room_list": []
+            },
+            {
+                "id": "12",
+                "merchant_code": "88888888",
+                "overdue_fine": "3",
+                "certificate_num": "123",
+                "agreement_num": "xzcasda",
+                "hire_name": "asd",
+                "hire_mobile1": "asd",
+                "account_status": "开户",
+                "created_at": "2024-01-15 11:34:25",
+                "cancel_account_at": null,
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "",
+                "room_list": [
+                    {
+                        "id": "12",
+                        "room_no": "501",
+                        "room_name": "Room 501",
+                        "room_floor": "5",
+                        "room_area": "6",
+                        "room_department": "0",
+                        "meter_list": []
+                    }
+                ]
+            },
+            {
+                "id": "15",
+                "merchant_code": "商户代码q",
+                "overdue_fine": "1.2",
+                "certificate_num": "证件号",
+                "agreement_num": "合同号q",
+                "hire_name": "租户姓名1",
+                "hire_mobile1": "联系电话1",
+                "account_status": "销户",
+                "created_at": "2024-01-02 11:13:55",
+                "cancel_account_at": "2024-01-15 10:59:48",
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "",
+                "room_list": []
+            },
+            {
+                "id": "16",
+                "merchant_code": "商户代码",
+                "overdue_fine": "1.2",
+                "certificate_num": "证件号",
+                "agreement_num": "合同号",
+                "hire_name": "租户姓名",
+                "hire_mobile1": "联系电话1",
+                "account_status": "开户",
+                "created_at": "2023-08-23 18:09:13",
+                "cancel_account_at": null,
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "",
+                "room_list": []
+            },
+            {
+                "id": "22",
+                "merchant_code": "3",
+                "overdue_fine": "0",
+                "certificate_num": "123",
+                "agreement_num": "123",
+                "hire_name": "123",
+                "hire_mobile1": "123",
+                "account_status": "开户",
+                "created_at": "2023-11-07 13:52:35",
+                "cancel_account_at": null,
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "",
+                "room_list": []
+            },
+            {
+                "id": "24",
+                "merchant_code": "111",
+                "overdue_fine": "1",
+                "certificate_num": "123",
+                "agreement_num": "222",
+                "hire_name": "123",
+                "hire_mobile1": "231",
+                "account_status": "销户",
+                "created_at": "2024-01-02 11:10:47",
+                "cancel_account_at": "2024-01-12 11:28:50",
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "",
+                "room_list": []
+            },
+            {
+                "id": "25",
+                "merchant_code": "admin_test",
+                "overdue_fine": "0.3",
+                "certificate_num": "210211188808210410",
+                "agreement_num": "admin_test_code",
+                "hire_name": "admin",
+                "hire_mobile1": "13470707177",
+                "account_status": "开户",
+                "created_at": "2024-01-15 14:41:43",
+                "cancel_account_at": null,
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "10000",
+                "room_list": [
+                    {
+                        "id": "19",
+                        "room_no": "100802",
+                        "room_name": "后付费房间",
+                        "room_floor": "9",
+                        "room_area": "8",
+                        "room_department": "7",
+                        "meter_list": [
+                            {
+                                "id": "8",
+                                "electric_no": "E004",
+                                "type": "2",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "后付费",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "7",
+                                "electric_no": "E003",
+                                "type": "2",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "后付费",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "14",
+                                "electric_no": "E010",
+                                "type": "2",
+                                "price": "3.00",
+                                "meter_type": "2",
+                                "meter_type_desc": "水表",
+                                "type_desc": "后付费",
+                                "unit_price_title": "平价1模版"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "13",
+                        "room_no": "502",
+                        "room_name": "Room 502",
+                        "room_floor": "5",
+                        "room_area": "4",
+                        "room_department": "0",
+                        "meter_list": []
+                    },
+                    {
+                        "id": "18",
+                        "room_no": "1008",
+                        "room_name": "人工抄表房间",
+                        "room_floor": "10",
+                        "room_area": "9",
+                        "room_department": "8",
+                        "meter_list": [
+                            {
+                                "id": "9",
+                                "electric_no": "E005",
+                                "type": "3",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "人工抄表",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "10",
+                                "electric_no": "E006",
+                                "type": "3",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "人工抄表",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "15",
+                                "electric_no": "E011",
+                                "type": "3",
+                                "price": "88.00",
+                                "meter_type": "2",
+                                "meter_type_desc": "水表",
+                                "type_desc": "人工抄表",
+                                "unit_price_title": "模板名称05"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "20",
+                        "room_no": "100803",
+                        "room_name": "预付费房间",
+                        "room_floor": "7",
+                        "room_area": "6",
+                        "room_department": "5",
+                        "meter_list": [
+                            {
+                                "id": "12",
+                                "electric_no": "E008",
+                                "type": "1",
+                                "price": "20.00",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "预付费",
+                                "unit_price_title": "模板名称0111"
+                            },
+                            {
+                                "id": "13",
+                                "electric_no": "E009",
+                                "type": "1",
+                                "price": "3.00",
+                                "meter_type": "2",
+                                "meter_type_desc": "水表",
+                                "type_desc": "预付费",
+                                "unit_price_title": "平价1模版"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "22",
+                        "room_no": "E011",
+                        "room_name": "电表1",
+                        "room_floor": "1",
+                        "room_area": "1",
+                        "room_department": "1",
+                        "meter_list": [
+                            {
+                                "id": "5",
+                                "electric_no": "E001",
+                                "type": "1",
+                                "price": "20.00",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "预付费",
+                                "unit_price_title": "模板名称0111"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "26",
+                "merchant_code": "123333",
+                "overdue_fine": "1",
+                "certificate_num": "1235",
+                "agreement_num": "12345",
+                "hire_name": "后付费租户111",
+                "hire_mobile1": "12345678",
+                "account_status": "开户",
+                "created_at": "2024-01-15 14:41:59",
+                "cancel_account_at": null,
+                "send_msg": "1",
+                "is_mini_app": "1",
+                "payment_ceiling": "1000",
+                "room_list": [
+                    {
+                        "id": "19",
+                        "room_no": "100802",
+                        "room_name": "后付费房间",
+                        "room_floor": "9",
+                        "room_area": "8",
+                        "room_department": "7",
+                        "meter_list": [
+                            {
+                                "id": "8",
+                                "electric_no": "E004",
+                                "type": "2",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "后付费",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "7",
+                                "electric_no": "E003",
+                                "type": "2",
+                                "price": "***",
+                                "meter_type": "1",
+                                "meter_type_desc": "电表",
+                                "type_desc": "后付费",
+                                "unit_price_title": null
+                            },
+                            {
+                                "id": "14",
+                                "electric_no": "E010",
+                                "type": "2",
+                                "price": "3.00",
+                                "meter_type": "2",
+                                "meter_type_desc": "水表",
+                                "type_desc": "后付费",
+                                "unit_price_title": "平价1模版"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "p": 1,
+        "page_size": "10"
+    },
+    "msg": "success",
+    "status": 1
+}

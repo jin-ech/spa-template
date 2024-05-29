@@ -1,0 +1,56 @@
+@import './button.less';
+
+.ant-modal {
+    padding-bottom: unset;
+}
+
+.ant-modal-content {
+    background-color: @bg-color;
+    color: #FFF;
+}
+
+.ant-modal-header {
+    background-color: @bg-color;
+    border-color: @shallow-color;
+    color: #fff;
+
+    .ant-modal-title {
+        color: #fff;
+    }
+}
+
+.ant-modal-body {
+    background-color: @bg-color;
+    color: #fff;
+}
+
+.ant-modal-close-x {
+    svg {
+        fill: #fff;
+    }
+}
+
+.ant-modal-confirm-btns {
+    button {
+        background: transparent;
+        color: #fff;
+    }
+
+    .ant-btn:hover {
+        background: transparent;
+    }
+
+    .ant-btn-primary,
+    .ant-btn-primary:hover {
+        background-color: @primary-color;
+    }
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-title {
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.ant-modal-footer {
+    border: unset;
+}

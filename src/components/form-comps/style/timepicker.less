@@ -1,0 +1,35 @@
+
+.ant-picker {
+    background: transparent;
+}
+
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner {
+    color: #fff;
+}
+
+.ant-picker-time-panel-column:not(:first-child) {
+    border-color: @shallow-color;
+}
+
+.ant-picker-ok {
+    .ant-btn-primary {
+        background-color: @primary-color;
+        color: #fff;
+        border-color: @primary-color;
+    }
+    .ant-btn-primary[disabled] {
+        background-color: @shallow-color;
+        border-color: @shallow-color;
+    }
+    .ant-btn-primary[disabled], .ant-btn-primary[disabled]:hover {
+        color: #fff;
+    }
+}
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner:hover  {
+    background-color: @primary-color;
+}
+
+.ant-picker-status-error.ant-picker, .ant-picker-status-error.ant-picker:not([disabled]):hover,
+.ant-picker-status-error.ant-picker {
+    background-color: transparent;
+}

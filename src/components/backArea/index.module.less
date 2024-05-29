@@ -1,0 +1,65 @@
+.container {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-bottom: 18px;
+    justify-content: space-between;
+
+    a {
+        color: @primary-color;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        display: inline-block;
+        z-index: 1;
+    }
+
+    .center {
+        display: flex;
+        
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+
+            position: relative;
+            left: 16px;
+
+            &::before {
+                content: "";
+                width: 4px;
+                height: 24px;
+                background-color: @primary-color;
+                position: absolute;
+                left: 0;
+                top: calc((100% - 24px) / 2);
+                left: -16px;
+            }
+        }
+        &.with-back {
+            position: absolute;
+            left: 0;
+            right: 0;
+            .header {
+                justify-content: center;
+                left: 0;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .right {
+    }
+
+    &.withline {
+        padding: 14px 0;
+        border-bottom: 1px solid @grey;
+    }
+}

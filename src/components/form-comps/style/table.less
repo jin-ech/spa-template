@@ -1,0 +1,134 @@
+@import './checkbox.less';
+@import './select.less';
+@import './pagination.less';
+@import './input.less';
+
+.ant-table {
+    background: transparent;
+
+    &::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: @bg-color;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.ant-table-thead>tr>th {
+    background: @grey;
+    color: #CFCFCF;
+}
+
+.ant-table-tbody>tr>td {
+    background-color: @bg-color;
+    color: #CFCFCF;
+}
+
+.ant-table-tbody>tr.ant-table-row-selected>td,
+.ant-table-tbody>tr.ant-table-row:hover>td {
+    // background-color: rgba(@bg-color, .5);
+    background-color: @grey;
+}
+
+.ant-table-thead>tr>th,
+.ant-table-tbody>tr>td {
+    border-color: #32363E;
+    padding: 24px 24px;
+}
+
+table tr th.ant-table-selection-column {
+    padding: 24px 16px;
+}
+
+.ant-table-ping-left .ant-table-cell-fix-left-last::after {
+    box-shadow: inset 10px 0 8px -8px rgba(#385F9A, .78);
+}
+
+.ant-table-ping-right .ant-table-cell-fix-right-first::after {
+    box-shadow: inset -10px 0 8px -8px rgba(#385F9A, .78);
+}
+
+.ant-checkbox-disabled .ant-checkbox-inner {
+    background-color: transparent;
+    border-color: @primary-color !important;
+}
+
+.ant-table-tbody>tr.ant-table-placeholder:hover>td {
+    background-color: rgba(@bg-color, .5);
+}
+
+.ant-empty-image {
+    svg {
+        fill: rgba(@grey, .5);
+    }
+}
+
+.ant-empty-img-simple-path {
+    fill: rgba(@grey, 1);
+}
+
+.ant-empty-img-simple-ellipse {
+    fill: rgba(#fff, .6);
+}
+
+.ant-empty-description {
+    color: #CFCFCF;
+}
+
+.ant-table-cell-scrollbar:not([rowspan]) {
+    box-shadow: 0 1px 0 1px @grey;
+}
+
+.ant-table-selection-column {
+    z-index: 3;
+}
+
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table,
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table,
+.ant-table.ant-table-bordered>.ant-table-container,
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tbody>tr>.ant-table-cell-fix-right-first::after,
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>thead>tr>.ant-table-cell-fix-right-first::after,
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tbody>tr>td,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > tbody > tr > td,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > thead > tr > th,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > tbody > tr > .ant-table-cell-fix-right-first::after,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > thead > tr > .ant-table-cell-fix-right-first::after,
+.ant-table-tbody>tr>td {
+    border: unset;
+}
+
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>thead>tr>th,
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tbody>tr>td {
+    border: unset;
+    border-bottom: 1px solid #445A85;
+}
+
+.ant-table-bordered {
+    border: 1px solid #445A85;
+}
+
+.ant-table-row-expand-icon {
+    background-color: transparent;
+    border-color: @primary-color;
+    &::before, &::after {
+        background: @primary-color;
+    }
+}
+
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td > .ant-table-expanded-row-fixed::after {
+    border-color: transparent;
+}
+
+.ant-checkbox-disabled .ant-checkbox-inner {
+    border-color: rgba(@primary-color, .2) !important;
+}
+
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td > .ant-table-expanded-row-fixed::after,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > tbody > tr > td > .ant-table-expanded-row-fixed::after,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > tbody > tr > td > .ant-table-expanded-row-fixed::after,
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-summary > table > tbody > tr > td > .ant-table-expanded-row-fixed::after {
+    border-right: unset;
+}

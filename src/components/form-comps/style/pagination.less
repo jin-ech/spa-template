@@ -1,0 +1,70 @@
+@pagination-border-color: rgba(#D7E9FF, .5);
+@pagination-color: #D7E9FF;
+
+.ant-pagination-total-text,
+.ant-pagination-options-quick-jumper {
+    color: #D7E9FF;
+}
+
+.ant-pagination-item {
+    background: transparent;
+    border-color: @pagination-border-color;
+    color: @pagination-color;
+    a {
+        color: @pagination-color;
+    }
+}
+
+.ant-pagination-next button,
+.ant-pagination-prev button {
+    border-color: @primary-color !important;
+
+    svg {
+        fill: @primary-color !important;
+    }
+}
+
+.ant-pagination-disabled button {
+    border-color: @pagination-border-color !important;
+    svg {
+        fill: @pagination-color !important;
+    }
+}
+
+.ant-pagination-item-active {
+    background: transparent;
+    border-color: @primary-color;
+
+    a {
+        color: @primary-color;
+    }
+}
+
+.ant-pagination-item-link {
+    background-color: transparent !important;
+    border: 1px solid @pagination-border-color;
+
+    svg {
+        fill: @pagination-color;
+    }
+}
+
+.ant-pagination-disabled {
+    .ant-pagination-item-link {
+        border-color: @pagination-border-color;
+    }
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+    border-color: @pagination-border-color;
+}
+
+.ant-pagination-options-quick-jumper input {
+    background-color: transparent;
+    color: @pagination-color;
+}
+
+.ant-pagination-options-quick-jumper input {
+    border-color: @primary-color;
+}

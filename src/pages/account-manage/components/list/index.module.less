@@ -1,0 +1,82 @@
+.container {
+    position: relative;
+
+    .header {
+        padding: 15px 18px;
+        display: flex;
+        justify-content: space-between;
+        // background-color: @shallow-color;
+
+        .left {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+
+            color: @primary-color;
+
+            .icon {
+                font-size: 24px;
+                margin-right: 8px;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            label {
+                margin: 0 8px 0 24px;
+
+                &::after {
+                    content: ": ";
+                }
+            }
+            button {
+                margin-left: 12px;
+            }
+        }
+
+    }
+
+
+    .opt {
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: inline-block;
+            margin: 0 8px;
+            user-select: none;
+            color: @primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // &:nth-child(1) {
+            //     color: @success-color;
+            // }
+
+            // &:nth-child(2) {
+            //     color: @primary-color;
+            // }
+
+            // &:nth-child(3) {
+            //     color: @error-color;
+            // }
+        }
+
+        .del {
+            color: @error-color;
+        }
+    }
+
+    .footer {
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+
+        button {
+            margin-right: 16px;
+        }
+    }
+}

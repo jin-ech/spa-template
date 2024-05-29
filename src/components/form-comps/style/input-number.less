@@ -1,0 +1,33 @@
+
+.ant-input-number-handler-wrap {
+    background-color: transparent;
+}
+
+.ant-input-number-handler {
+    border-color: @control-color;
+    
+    svg {
+        fill: @control-color;
+    }
+}
+.ant-input-number:hover:not(.ant-input-number-borderless) .ant-input-number-handler-down {
+    border-top: 1ps solid @control-color !important;
+}
+
+.ant-input-number-handler-down,
+.ant-input-number:hover:not(.ant-input-number-borderless) .ant-input-number-handler-down {
+    border-color: @control-color !important;
+}
+
+.ant-input-number-handler:active {
+    background: @control-color;
+
+    svg {
+        fill: #fff;
+    }
+}
+
+.ant-input-number-status-error,
+.ant-input-number {
+    background: transparent !important;
+}

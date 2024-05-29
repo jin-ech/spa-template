@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+		"outDir": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@api": ["src/request/api/index.js"],
+      "@actions": ["src/request/actions/index.js"],
+			"@model": ["./src/request/model/index.ts"],
+      "~src": ["./src/*"]
+    },
+    "target": "es2015",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": false,
+    "noErrorTruncation": true,
+    "noImplicitThis": false
+  },
+  "include": ["src", "declaration.d.ts"],
+	"exclude": ["node_modules", "dist"]
+}

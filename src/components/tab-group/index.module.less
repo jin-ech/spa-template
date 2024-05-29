@@ -1,0 +1,27 @@
+
+.container {
+    display: flex;
+
+    .item {
+        padding: 4px 12px;
+        margin-left: 4px;
+        user-select: none;
+
+        &:first-child {
+            margin-left: unset;
+        }
+
+        border-radius: 1.8px;
+        background-color: #373F4F;
+        color: #fff;
+        font-size: 14px;
+        transition: all .2s linear;
+        
+        cursor: pointer;
+        
+        &.selected {
+            background-color: #1E2025;
+            color: @primary-color;
+        }
+    }
+}

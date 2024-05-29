@@ -1,0 +1,50 @@
+.container {
+
+    background: @bg-color;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 44px 0 24px;
+    height: 90px;
+
+    .left {
+        font-size: 24px;
+        color: #000;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        user-select: none;
+
+        .logo {
+            width: 126px;
+            height: 30px;
+            background-image: url(/public/static/image/logo.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+        }
+
+        .avatar {
+            margin-left: 12px;
+            background-color: transparent;
+            border: 1px solid @primary-color;
+            cursor: pointer;
+
+            svg {
+                fill: @primary-color;
+            }
+        }
+        .username {
+            color: #000;
+            font-size: 16px;
+            margin-left: 12px;
+        }
+    }
+}

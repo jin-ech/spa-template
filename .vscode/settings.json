@@ -1,0 +1,6 @@
+{
+    "i18n-ally.localesPaths": [],
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+    "editor.tabSize": 4,
+}
