@@ -1,8 +1,8 @@
 /*
  * @Author: jinech
  * @Date: 2022-12-26 14:22:46
- * @LastEditors: JC 13478707150@163.com
- * @LastEditTime: 2023-01-06 09:58:13
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-30 17:00:34
  * @FilePath: \spa-template\src\layout\layout-main\index.tsx
  * @Description: 基础布局-主体部分
  */
@@ -20,7 +20,7 @@ import styles from './index.module.less';
 
 const { Content } = Layout;
 
-const LayoutMain: React.FC = () => {
+const LayoutMain = () => {
     return (
         <Content className={styles.container}>
             <Switch>

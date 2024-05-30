@@ -1,13 +1,13 @@
 /*
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-08-22 17:21:31
- * @LastEditors: jinech 13478707150@163.com
- * @LastEditTime: 2024-03-13 14:53:57
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-30 16:50:47
  * @FilePath: \spa-template\src\pages\account-manage\components\toolbar\index.jsx
  * @Description: 工具栏
  */
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useTransition } from 'react';
 import cls from 'classnames';
 import moment from 'moment';
 
@@ -19,10 +19,12 @@ import { SearchOutlined } from '@ant-design/icons';
 import { AccountStatusEnum } from '@/constants';
 
 import styles from './index.module.less';
+import { useTranslation } from 'react-i18next';
 
 const Toolbar = ({ className, loading, onSearch }) => {
     const prefix = cls(styles.container, className);
     const [form] = Form.useForm();
+    const { t } = useTranslation();
 
     const handleSearch = () => {
         const values = form.getFieldsValue();
@@ -63,7 +65,7 @@ const Toolbar = ({ className, loading, onSearch }) => {
                     loading={loading}
                     onClick={handleSearch}
                     icon={<SearchOutlined />}
-                >查询</Button>
+                >{t('button.search')}</Button>
             )
         }
     ], [loading]);

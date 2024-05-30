@@ -1,33 +1,23 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-27 13:54:52
- * @LastEditors: WIN-J7OL7MK489U\EDY 13478707150@163.com
- * @LastEditTime: 2023-12-12 17:05:00
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-30 15:03:20
  * @FilePath: \spa-template\src\hooks\useUserInfo.ts
  * @Description: 获取用户信息
  */
 
 import { useState } from 'react';
 import { useHistory } from 'react-router';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateUserDetail, userDetail } from '@/store/user.slice';
 
 import { getUserInfoAction } from '@actions';
+import { useStore } from '@/store/jcstore';
+import context from '@/store';
 
 const useUserInfo = () => {
-    const dispatch = useDispatch();
     const history = useHistory();
-    const store = useSelector(userDetail);
     const [loading, updateLoading] = useState(false);
-
-    /**
-     * @description: 全局挂载用户信息
-     * @param {any} values
-     * @return {*}
-     */
-    const dispatchUserInfo = values => {
-        dispatch(updateUserDetail(values));
-    };
+    const [store, updateStore] = useStore(context);
 
     /**
      * @description: 获取用户信息
@@ -38,11 +28,10 @@ const useUserInfo = () => {
         try {
             updateLoading(true);
             const res = await getUserInfoAction(values);
-            dispatchUserInfo(res?.data);
+            updateStore(data => {
+                data.username = res?.data?.username;
+            });
             return res;
-        }
-        catch {
-            dispatch(updateUserDetail(null));
         }
         finally {
             updateLoading(false);
@@ -54,16 +43,15 @@ const useUserInfo = () => {
      * @return {*}
      */
     const logout = path => {
-        // localStorage.setItem('Authorization', '');
-        // dispatchUserInfo(null);
-        // history.replace(path ?? '/login');
+        localStorage.setItem('Authorization', '');
+        getUserInfoTask(store => store.username = null);
+        history.replace(path ?? '/login');
     };
 
     return {
         loading,
-        user: store.detail,
+        user: store,
         getUserInfoTask,
-        dispatchUserInfo,
         logout
     };
 };

@@ -1,6 +1,6 @@
 const result = {
     "data": {
-        "username": "admin",
+        "username": "jinech",
     },
     "msg": "success",
     "status": 1

@@ -2,12 +2,12 @@
  * @Author: jinech 13478707150@163.com
  * @Date: 2022-12-26 14:22:46
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 10:08:03
+ * @LastEditTime: 2024-05-30 16:41:26
  * @FilePath: \lynkros-manage\src\layout\layout-sider\index.tsx
  * @Description: 基础布局-侧边栏
  */
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router';
 import { matchRoutes } from 'react-router-config';
 import { useSessionStorageState } from 'ahooks';
@@ -16,7 +16,6 @@ import { Layout, Menu } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
 import layoutItems from '@/configure/layout';
-import type { LayoutSiderItem } from '@/configure/layout';
 import routes from '@/configure/routes';
 import { findTreePath, getMenuItems } from './util';
 
@@ -24,7 +23,7 @@ import styles from './index.module.less';
 
 const { Sider } = Layout;
 
-const LayoutSider: React.FC = () => {
+const LayoutSider = () => {
     const history = useHistory();
     const [collapsed, updateCollapsed] = useState(false);
 
@@ -39,7 +38,7 @@ const LayoutSider: React.FC = () => {
      * @param {LayoutSiderItem} item
      * @return {*}
      */
-    const handleMenuItemClick = (item: LayoutSiderItem) => {
+    const handleMenuItemClick = (item) => {
         if (!item.path) {
             return;
         }
@@ -53,7 +52,7 @@ const LayoutSider: React.FC = () => {
      * @param {object} item
      * @return {*}
      */
-    const handleTitleClick = (item: { key: string }) => {
+    const handleTitleClick = (item) => {
         const _openKeys = openKeys.includes(item.key)
             ? openKeys.filter(key => key !== item.key)
             : [...openKeys, item.key];
@@ -71,18 +70,17 @@ const LayoutSider: React.FC = () => {
         }
         const res = matchRoutes(routes, pathname);
         const { key } = res?.[0]?.route || {};
-        const $openKeys = findTreePath(layoutItems, (item: LayoutSiderItem) => item.key === (key as string));
+        const $openKeys = findTreePath(layoutItems, item => item.key === key);
         const keys = [...openKeys, ...($openKeys || [])];
         updateOpenKeys(keys);
         updateCacheOpenKeys(keys);
-        updateSelectedKeys([key as string]);
+        updateSelectedKeys([key]);
     }, [match, layoutItems]);
 
     // 格式化菜单项数据
     const menuItems = React.useMemo(() => {
         return getMenuItems(layoutItems, handleMenuItemClick, handleTitleClick);
     }, [layoutItems, openKeys]);
-
 
     useEffect(() => {
         if (!collapsed) {
