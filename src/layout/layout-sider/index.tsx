@@ -2,12 +2,12 @@
  * @Author: jinech 13478707150@163.com
  * @Date: 2022-12-26 14:22:46
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-29 15:14:53
+ * @LastEditTime: 2024-05-30 09:17:31
  * @FilePath: \lynkros-manage\src\layout\layout-sider\index.tsx
  * @Description: 基础布局-侧边栏
  */
 
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router';
 import { matchRoutes } from 'react-router-config';
 
@@ -96,6 +96,7 @@ const LayoutSider: React.FC = () => {
             trigger={null}
             collapsed={collapsed}
             className={styles.container}
+            theme='light'
         >
             <Menu
                 theme='light'
