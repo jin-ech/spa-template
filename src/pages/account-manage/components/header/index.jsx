@@ -19,6 +19,7 @@ import { DownloadOutlined, UploadOutlined } from '@ant-design/icons';
 import notification from '@/components/notification';
 
 import styles from './index.module.less';
+import i18n from '@/i18next';
 
 const Header = ({ className, onUploadOk, onCreateAccount }) => {
     const prefix = cls(styles.container, className);
@@ -42,23 +43,29 @@ const Header = ({ className, onUploadOk, onCreateAccount }) => {
     return (
         <div className={prefix}>
             <div className={styles.col}>
-                <div className={styles.label}>单次开户</div>
+                <div className={styles.label}>
+                    {i18n.t('page.accountManage.header.createAccountLable')}
+                </div>
                 <div className={styles.content}>
-                    <Button type='primary' onClick={onCreateAccount}>开户</Button>
+                    <Button type='primary' onClick={onCreateAccount}>
+                        {i18n.t('page.accountManage.header.button.createAccount')}
+                    </Button>
                 </div>
             </div>
             <div className={styles.col}>
-                <div className={styles.label}>批量开户</div>
+                <div className={styles.label}>
+                    {i18n.t('page.accountManage.header.batchCreateAccountLabel')}
+                </div>
                 <div className={styles.content}>
                     <Button
                         type='primary'
                         icon={<DownloadOutlined />}
                         onClick={handleTemplatDownload}
-                    >
-                        模板下载
+                        >
+                        {i18n.t('page.accountManage.header.button.templateDownload')}
                     </Button>
                     <FormUpload.Button
-                        bnText='文件上传'
+                        bnText={i18n.t('page.accountManage.header.button.uploadFile')}
                         accept='.xls,.xlsx'
                         url={exampleApi}
                         buttonProps={{

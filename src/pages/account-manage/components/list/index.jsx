@@ -10,57 +10,7 @@
 import React, { useMemo } from 'react';
 
 import { FormTable } from '@/components/form-comps';
-
-const getColumns = () => ([
-    {
-        title: '序号',
-        fixed: 'left',
-        width: 80,
-        align: 'center',
-        render: (_, _r, index) => index + 1
-    },
-    {
-        title: 'ID',
-        width: 120,
-        fixed: 'left',
-        dataIndex: 'id'
-    },
-    {
-        title: '账号',
-        fixed: 'left',
-        width: 120,
-        dataIndex: 'merchant_code'
-    },
-    {
-        title: '合同号',
-        dataIndex: 'agreement_num'
-    },
-    {
-        title: '租户姓名',
-        dataIndex: 'hire_name'
-    },
-    {
-        title: '联系电话',
-        dataIndex: 'hire_mobile1'
-    },
-    {
-        title: '账户状态',
-        dataIndex: 'account_status'
-    },
-    {
-        title: '开户(销户)时间',
-        dataIndex: 'account_status',
-        render: (val, record) => {
-            if (val === '开户') {
-                return record?.created_at;
-            }
-            if (val === '销户') {
-                return record?.cancel_account_at;
-            }
-            return '-';
-        }
-    },
-]);
+import { getColumns } from './columns';
 
 const List = ({
     loading,

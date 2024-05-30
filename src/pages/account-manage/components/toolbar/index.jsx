@@ -2,7 +2,7 @@
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-08-22 17:21:31
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 16:50:47
+ * @LastEditTime: 2024-05-30 17:33:33
  * @FilePath: \spa-template\src\pages\account-manage\components\toolbar\index.jsx
  * @Description: 工具栏
  */
@@ -41,7 +41,7 @@ const Toolbar = ({ className, loading, onSearch }) => {
     const items = useMemo(() => [
         {
             name: 'account_status',
-            label: '开户状态',
+            label: t('page.accountManage.toolbar.accountStatus'),
             component: <FormSelect
                 className={styles.control}
                 options={transformObjectToArr(AccountStatusEnum)}
@@ -50,18 +50,14 @@ const Toolbar = ({ className, loading, onSearch }) => {
         },
         {
             name: 'rangeDate',
-            label: '开户时间',
+            label: t('page.accountManage.toolbar.addTime'),
             component: <FormDatePicker.RangePicker style={{ width: 320 }} />
-        },
-        {
-            name: 'keyword',
-            component: <FormInput style={{ width: 320 }} placeholder='账号/合同号/租户姓名/联系电话' />
         },
         {
             component: (
                 <Button
                     type='primary'
-                    style={{ marginLeft: 58 }}
+                    style={{ marginLeft: 24 }}
                     loading={loading}
                     onClick={handleSearch}
                     icon={<SearchOutlined />}

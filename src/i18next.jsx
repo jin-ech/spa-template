@@ -2,7 +2,7 @@
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-05-29 11:42:58
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 17:08:21
+ * @LastEditTime: 2024-05-30 17:25:53
  * @FilePath: \spa-template\src\App.tsx
  * @Description: 入口文件
  */
@@ -21,7 +21,10 @@ import i18nEnUS from '@/local/en_US';
 
 import './App.less';
 
-const language = process.env.LANGUAGE;
+const language = ({
+    ['zhCN']: 'zh-cn',
+    ['enUS']: 'en-us'
+})[localStorage.getItem('language')] || process.env.LANGUAGE;
 
 dayjs.locale(language);
 
@@ -52,7 +55,6 @@ i18next
         },
         resources,
         fallbackLng: locale.i18n,
-        // lng: locale.i18n // 这里是默认语言，也就是初始显示的语言类型
     });
 
 const i18n = i18next;
