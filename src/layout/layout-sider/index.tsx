@@ -2,7 +2,7 @@
  * @Author: jinech 13478707150@163.com
  * @Date: 2022-12-26 14:22:46
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 09:17:31
+ * @LastEditTime: 2024-05-30 10:08:03
  * @FilePath: \lynkros-manage\src\layout\layout-sider\index.tsx
  * @Description: 基础布局-侧边栏
  */
@@ -10,6 +10,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router';
 import { matchRoutes } from 'react-router-config';
+import { useSessionStorageState } from 'ahooks';
 
 import { Layout, Menu } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
@@ -28,7 +29,7 @@ const LayoutSider: React.FC = () => {
     const [collapsed, updateCollapsed] = useState(false);
 
     const [selectedKeys, updateSelectedKeys] = useState(['/dashboard']);
-    const cacheOpenKeys = useRef([]);
+    const [cacheOpenKeys, updateCacheOpenKeys] = useSessionStorageState('menu-openkeys', { defaultValue: [] });
     const [openKeys, updateOpenKeys] = useState([]);
     const pathname = history.location.pathname;
     const match = useRouteMatch();
@@ -57,6 +58,7 @@ const LayoutSider: React.FC = () => {
             ? openKeys.filter(key => key !== item.key)
             : [...openKeys, item.key];
         updateOpenKeys(_openKeys);
+        updateCacheOpenKeys(_openKeys);
     };
 
     /**
@@ -70,7 +72,9 @@ const LayoutSider: React.FC = () => {
         const res = matchRoutes(routes, pathname);
         const { key } = res?.[0]?.route || {};
         const $openKeys = findTreePath(layoutItems, (item: LayoutSiderItem) => item.key === (key as string));
-        updateOpenKeys([...openKeys, ...($openKeys || [])]);
+        const keys = [...openKeys, ...($openKeys || [])];
+        updateOpenKeys(keys);
+        updateCacheOpenKeys(keys);
         updateSelectedKeys([key as string]);
     }, [match, layoutItems]);
 
@@ -79,14 +83,15 @@ const LayoutSider: React.FC = () => {
         return getMenuItems(layoutItems, handleMenuItemClick, handleTitleClick);
     }, [layoutItems, openKeys]);
 
+
     useEffect(() => {
         if (!collapsed) {
             setTimeout(() => {
-                updateOpenKeys(cacheOpenKeys.current);
+                updateOpenKeys(cacheOpenKeys);
             }, 0);
             return;
         }
-        cacheOpenKeys.current = openKeys;
+        updateCacheOpenKeys(openKeys);
         updateOpenKeys([]);
     }, [collapsed]);
 

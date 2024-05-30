@@ -2,7 +2,7 @@
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-05-29 11:42:58
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-29 17:47:32
+ * @LastEditTime: 2024-05-30 09:59:51
  * @FilePath: \spa-template\src\App.tsx
  * @Description: 入口文件
  */
@@ -23,6 +23,8 @@ import 'dayjs/locale/zh-cn';
 
 import './App.less';
 
+import { tokenColors } from '@/style/tokenVariables';
+
 dayjs.locale('zh-cn');
 
 i18n.use(initReactI18next).init({
@@ -34,7 +36,7 @@ function App() {
     return (
         <ReduxProvider store={store}>
             <HashRouter>
-                <ConfigProvider locale={zhCN}>
+                <ConfigProvider locale={zhCN} theme={{ token: tokenColors }}>
                     <PrimaryLayout />
                 </ConfigProvider>
             </HashRouter>

@@ -30,7 +30,8 @@
   <div id="root"></div>
   <script>
     var errorLog = console.error;
-    console.error = err => err.includes('defaultProps') ? null : errorLog(err);
+    const ignoreErrors = [`Please use 'App' component instead`, 'defaultProps'];
+    console.error = err => ignoreErrors.some(msg => err.includes(msg)) ? null : errorLog(err);
   </script>
   <!--
       This HTML file is a template.
