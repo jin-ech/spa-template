@@ -16,8 +16,19 @@ const zhCN = {
             accountManage: '账户管理',
             roomManage: '房间管理'
         },
+        constants: {
+            AccountStatusEnum: {
+                open: {
+                    label: '已开户'
+                },
+                close: {
+                    label: '销户'
+                }
+            }
+        },
         page: {
             accountManage: {
+                title: '账户管理',
                 header: {
                     createAccountLable: '单次开户',
                     batchCreateAccountLabel: '批量开户',

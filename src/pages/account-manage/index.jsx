@@ -1,8 +1,8 @@
 /*
  * @Author: jinech 13478707150@163.com
  * @Date: 2023-08-18 14:58:13
- * @LastEditors: jinech 13478707150@163.com
- * @LastEditTime: 2024-05-29 14:54:55
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-30 17:50:13
  * @FilePath: \spa-template\src\pages\account-manage\index.jsx
  * @Description: 账户管理
  */
@@ -18,6 +18,7 @@ import useRequestList from '@/hooks/useRequestList';
 import { mockRequest } from '@/utils';
 
 import styles from './index.module.less';
+import i18n from '@/i18next';
 
 const AccountManage = () => {
     const { data, loading, getDataTask, filterParams } = useRequestList({ action: () => mockRequest(() => null, 1000), initFilterParams: {
@@ -27,7 +28,7 @@ const AccountManage = () => {
 
     return (
         <div className={styles.container}>
-            <BackArea title='账户管理' />
+            <BackArea title={i18n.t('page.accountManage.title')} />
             <Header
                 className={styles.header}
                 onUploadOk={getDataTask}

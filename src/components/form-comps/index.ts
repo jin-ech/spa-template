@@ -17,6 +17,7 @@ import { default as FormAutoComplete } from './form-autocomplete';
 import { default as FormCalendar } from './form-calendar';
 import { default as FormTag } from './form-tag';
 import { default as FormCascader } from './form-cascader';
+import { default as FormStatus } from './form-status';
 
 export {
     FormLabel,
@@ -35,5 +36,6 @@ export {
     FormAutoComplete,
     FormCalendar,
     FormTag,
-    FormCascader
+    FormCascader,
+    FormStatus
 };

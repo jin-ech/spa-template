@@ -16,8 +16,19 @@ const enUS = {
             accountManage: 'account-manage',
             roomManage: 'room-manage'
         },
+        constants: {
+            AccountStatusEnum: {
+                open: {
+                    label: 'open'
+                },
+                close: {
+                    label: 'close'
+                }
+            }
+        },
         page: {
             accountManage: {
+                title: 'Account Manage',
                 header: {
                     createAccountLable: 'signle create account',
                     batchCreateAccountLabel: 'batch create account',

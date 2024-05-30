@@ -1,0 +1,94 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+
+    .status {
+        max-width: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+
+            &.disabled {
+                // background-color: @disabled-color;
+                background-color: #888;
+            }
+
+            // &.processing {
+            //     background-color: @primary-color;
+            // }
+            &.success {
+                background-color: @color-success;
+            }
+
+            &.error {
+                background-color: @color-error;
+            }
+
+            &.warning {
+                background-color: @color-warning;
+            }
+        }
+
+        .process-dot-left,
+        .process-dot-right {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: @color-primary;
+            display: inline-block;
+        }
+
+        .process-dot-left {
+            animation: process-left 3s linear infinite;
+        }
+        
+        .process-dot-right {
+            animation: process-right 3s linear infinite;
+        }
+
+        @keyframes process-left {
+            0% {
+                transform: translateX(-6px) scale(1);
+            }
+            25% {
+                transform: translateX(0px) scale(0.8);
+            }
+            50% {
+                transform: translateX(14px) scale(1);
+            }
+            75% {
+                transform: translateX(0px) scale(0.8);
+            }
+            100% {
+                transform: translateX(-6px) scale(1);
+            }
+        }
+        @keyframes process-right {
+            0% {
+                transform: translateX(6px) scale(1);
+            }
+            25% {
+                transform: translateX(0px) scale(0.8);
+            }
+            50% {
+                transform: translateX(-14px) scale(1);
+            }
+            75% {
+                transform: translateX(0px) scale(0.8);
+            }
+            100% {
+                transform: translateX(6px) scale(1);
+            }
+        }
+    }
+
+
+    .label {
+        margin-left: 8px;
+    }
+}
