@@ -1,8 +1,8 @@
 /*
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-06-20 13:40:34
- * @LastEditors: jinech 13478707150@163.com
- * @LastEditTime: 2024-03-28 15:10:13
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-31 10:11:18
  * @FilePath: \business-register-web\src\hooks\useRequestList\index.ts
  * @Description: 通用列表接口请求
  */
@@ -29,7 +29,6 @@ function useRequestList<P, R>({
 }: UseRequestListProps<P, R>) {
     const [loading, updateLoading] = useState(false);
     const filterParamsRef = useRef(initFilterParams);
-    // const [filterParams, updateFilterParams] = useState(initFilterParams);
     const [data, updateData] = useState<R>();
 
     const getDataTask = async (params: P, loading = true) => {
@@ -37,11 +36,8 @@ function useRequestList<P, R>({
             loading && updateLoading(true);
             const filterParams = filterParamsRef.current;
             const queryParams = { ...filterParams, ...params };
-            // console.log('params: ', filterParams, params, queryParams);
-            // console.log('==============');
             const res = await action(queryParams);
             filterParamsRef.current = queryParams;
-            // updateFilterParams(queryParams);
             updateData(res);
             onOk?.();
             return res;

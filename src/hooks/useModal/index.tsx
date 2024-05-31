@@ -1,8 +1,8 @@
 /*
  * @Author: WIN-J7OL7MK489U\EDY 13478707150@163.com
  * @Date: 2023-06-06 14:29:16
- * @LastEditors: WIN-J7OL7MK489U\EDY 13478707150@163.com
- * @LastEditTime: 2024-02-01 14:47:03
+ * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
+ * @LastEditTime: 2024-05-31 10:07:02
  * @FilePath: \spa-template\src\pages\project\node-type\hooks\useConfirmModal\index.tsx
  * @Description: 确认删除弹窗
  */
@@ -10,8 +10,6 @@
 import React, { useState, useMemo } from 'react';
 
 import { Modal, ModalProps } from 'antd';
-import '@/components/form-comps/style/modal.less';
-import '@/components/form-comps/style/button.less';
 
 interface UseConfirmModalProps extends ModalProps {
     onOk?: (values?: any) => void;
@@ -19,7 +17,7 @@ interface UseConfirmModalProps extends ModalProps {
     children?: React.ReactNode;
 };
 
-const useConfirmModal = ({
+const useModal = ({
     onOk,
     onCancel,
     children,
@@ -88,4 +86,4 @@ const useConfirmModal = ({
     };
 };
 
-export default useConfirmModal;
+export default useModal;

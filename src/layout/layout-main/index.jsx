@@ -22,7 +22,7 @@ const { Content } = Layout;
 
 const LayoutMain = () => {
     return (
-        <Content className={styles.container}>
+        <Content id='page-content' className={styles.container}>
             <Switch>
                 <Suspense fallback={<PageLoading />}>
                     {renderRoutes(routes)}
