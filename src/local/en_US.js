@@ -6,6 +6,7 @@
 const enUS = {
     translation: {
         nativeName: 'English',
+        doctitle: 'signle page application',
         apptitle: 'Application',
         button: {
             search: 'search'

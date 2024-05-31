@@ -2,7 +2,7 @@
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-27 10:34:08
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-29 18:05:15
+ * @LastEditTime: 2024-05-31 09:28:38
  * @FilePath: \spa-template\src\request\util.ts
  * @Description: 请求服务工具包
  */
@@ -49,15 +49,7 @@ export const createService = ({ responsePath }: { responsePath?: string }) => {
 
     service.interceptors.response.use(
         response => {
-            const { data: { status, code, msg, message } } = response;
-            switch (+code) {
-                case 0:
-                    notification.error(msg || message);
-                    return Promise.reject(msg || message);
-                case 1:
-                    notification.error(msg || message);
-                    return Promise.reject(msg || message);
-            }
+            const { data: { status, msg } } = response;
             switch (+status) {
                 case 10000:
                     const inRedirectList = redirectBlackList.find(path => window.location.pathname.startsWith(path));

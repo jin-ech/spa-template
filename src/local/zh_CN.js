@@ -6,6 +6,7 @@
 const zhCN = {
     translation: {
         nativeName: '中文',
+        doctitle: '单页应用',
         apptitle: '应用',
         button: {
             search: '搜索'

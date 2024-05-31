@@ -2,8 +2,8 @@
  * @Author: jinech 13478707150@163.com
  * @Date: 2022-12-26 14:22:46
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 16:41:26
- * @FilePath: \lynkros-manage\src\layout\layout-sider\index.tsx
+ * @LastEditTime: 2024-05-31 09:28:16
+ * @FilePath: \spa-template\src\layout\layout-sider\index.tsx
  * @Description: 基础布局-侧边栏
  */
 

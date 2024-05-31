@@ -2,7 +2,7 @@
  * @Author: jinech 13478707150@163.com
  * @Date: 2022-12-26 14:22:46
  * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 17:13:27
+ * @LastEditTime: 2024-05-31 09:27:13
  * @FilePath: \spa-template\src\layout\layout-header\index.tsx
  * @Description: 基础布局-头部
  */
@@ -26,7 +26,6 @@ const lngOptions = Object.keys(lngs).map(key => lngs[key]);
 
 const LayoutHeader = () => {
     const history = useHistory();
-    const { t } = useTranslation();
     const [store] = useStore(context);
 
     const { i18n } = useTranslation();
@@ -37,13 +36,14 @@ const LayoutHeader = () => {
 
     useEffect(() => {
         i18n.changeLanguage(language);
-        localStorage.setItem('language', language)
+        localStorage.setItem('language', language);
+        document.title = i18n.t('doctitle');
     }, [language]);
 
 
     return (
         <Header className={styles.container}>
-            <div className={styles.left} onClick={() => history.push('/')}>{t('apptitle')}</div>
+            <div className={styles.left} onClick={() => history.push('/')}>{i18n.t('apptitle')}</div>
             <div className={styles.right}>
                 {/* <div className={styles.logo}></div> */}
                 <Form form={form}>
