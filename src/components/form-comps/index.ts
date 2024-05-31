@@ -18,6 +18,7 @@ import { default as FormCalendar } from './form-calendar';
 import { default as FormTag } from './form-tag';
 import { default as FormCascader } from './form-cascader';
 import { default as FormStatus } from './form-status';
+import { default as FormKonva } from './form-konva';
 
 export {
     FormLabel,
@@ -37,5 +38,6 @@ export {
     FormCalendar,
     FormTag,
     FormCascader,
-    FormStatus
+    FormStatus,
+    FormKonva
 };
