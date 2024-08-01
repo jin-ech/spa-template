@@ -11,6 +11,7 @@ const FormCascader: React.FC<CascaderProps<any>> = ({
 }) => {
     const prefix = cls(styles.container, className);
 
+    // @ts-ignore
     return <Cascader className={prefix} {...props} />;
 };
 

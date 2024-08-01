@@ -1,8 +1,8 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-26 14:22:46
- * @LastEditors: jinech 13478707150@163.com
- * @LastEditTime: 2024-05-24 15:15:19
+ * @LastEditors: DESKTOP-PJ5G56S\Administrator 13478707150@163.com
+ * @LastEditTime: 2024-08-01 15:58:55
  * @FilePath: \spa-template\src\configure\routes\index.js
  * @Description: 路由配置导出
  */
@@ -25,6 +25,12 @@ const routes: RouterItem[] = [
         path: '/dashboard',
         exact: true,
         component: React.lazy(() => import('@/pages/dashboard'))
+    },
+    {
+        key: '/flow',
+        path: '/flow',
+        exact: true,
+        component: React.lazy(() => import('@/pages/flow'))
     },
     ...tenantRoutes,
     {

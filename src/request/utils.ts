@@ -1,8 +1,8 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-27 10:34:08
- * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-31 09:28:38
+ * @LastEditors: DESKTOP-PJ5G56S\Administrator 13478707150@163.com
+ * @LastEditTime: 2024-08-01 15:57:52
  * @FilePath: \spa-template\src\request\util.ts
  * @Description: 请求服务工具包
  */
@@ -72,7 +72,7 @@ export const createService = ({ responsePath }: { responsePath?: string }) => {
             const { data } = error.response || {};
             const msg = data?.msg;
             notification.error(msg ?? `${error}`);
-            return Promise.reject(error);
+            // return Promise.reject(error);
         }
     );
 

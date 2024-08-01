@@ -1,8 +1,8 @@
 /*
  * @Author: JC 13478707150@163.com
  * @Date: 2022-12-26 14:44:34
- * @LastEditors: WIN-JK0MIV6Q22K\EDY 13478707150@163.com
- * @LastEditTime: 2024-05-30 17:18:07
+ * @LastEditors: DESKTOP-PJ5G56S\Administrator 13478707150@163.com
+ * @LastEditTime: 2024-08-01 15:59:06
  * @FilePath: \spa-template\src\configure\layout\index.js
  * @Description: 主菜单配置
  */
@@ -27,6 +27,12 @@ const layoutConfig: LayoutSiderItem[] = [
         key: '/dashboard',
         path: '/dashboard',
         label: i18n.t('menu.dashboard'),
+        icon: <HomeOutlined />
+    },
+    {
+        key: '/flow',
+        path: '/flow',
+        label: 'flow',
         icon: <HomeOutlined />
     },
     {
